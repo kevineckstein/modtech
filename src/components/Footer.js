@@ -11,6 +11,7 @@ const Footer = () => {
             src={img}
             alt="modern tech logo"
             height="300px"
+            width="500px"
             className="mx-auto overflow-visible"
           />
         </Link>
