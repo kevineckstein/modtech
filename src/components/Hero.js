@@ -55,8 +55,8 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
           })}
         </Slider>
       </div>
-      <div className="hidden w-full -mt-24 bannerBG lg:block"></div>
-      <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-16 text-center lg:gap-8 ">
+      <div className="hidden w-full -mt-16 bannerBG lg:block"></div>
+      <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-10 text-center lg:gap-8 ">
         <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:mx-0 lg:w-1/4 hover:shadow-xl">
           <div className="flex-shrink-0">
             <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
