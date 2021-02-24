@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Font Style
+*/
+h1 {
+  font-family: "LibreBaskerville", serif;
+}
+.font-heading {
+  font-family: "LibreBaskerville", serif;
+}
+p {
+  font-family: "Lato", serif;
+}
+.font-sub {
+  font-family: "Lato", serif;
+}
+.wid {
+  width: 0.125rem;
+}
+
+/*
+Navbar
+*/
+#header.hide {
+  top: -20rem;
+}
+#header {
+  transition: all 0.4s ease-in-out;
+}
+.NoScroll {
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+.clear {
+  background-color: white;
+  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.25);
+}
+.text {
+  color: black;
+}
+.services {
+  display: none;
+}
+.service:hover .services {
+  display: block;
+}
+/*
+Banner Style
+*/
+@media (max-width: 1024px) {
+  .banner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .banner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 680px;
+  }
+}
+
+.slick-track .slick-slide {
+  min-height: 100%;
+}
+.bannerBG {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url("../../static/bannerBG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
