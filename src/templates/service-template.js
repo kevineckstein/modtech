@@ -29,7 +29,7 @@ const ComponentName = ({ data }) => {
   return (
     <article>
       <SEO
-        title={`Eckstein Modern Tech Ltd - ${metaTagTitle}`}
+        title={`Modern Tech Ltd - ${metaTagTitle}`}
         keywords={metaTagKeywords}
         description={metaTagDescription}
       />
@@ -70,7 +70,7 @@ const ComponentName = ({ data }) => {
           <div className="hidden w-full -mt-16 bannerBG lg:block"></div>
         </section>
         <section className="bg-gradient-to-t from-gray-100 via-blue-100 to-gray-100">
-          <div className="container px-6 py-24 mx-auto" id="temp-service">
+          <div className="container px-6 pb-24 mx-auto" id="temp-service">
             <section>
               <div className="mb-20 text-center">
                 <h1 className="mb-4 text-2xl font-medium text-center text-gray-900 sm:text-3xl title-font">

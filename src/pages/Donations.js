@@ -11,7 +11,7 @@ const Donation = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Eckstein Modern Tech Ltd - Donations"
+        title="Modern Tech Ltd - Donations"
         keywords="Trinidad, Eckstein Modern Tech Ltd, Donations, Community, Help, Provide"
         description="Eckstein Modern Tech Ltd creates donation drives to help communities and problems areas in Trinidad. With donations we aim to change and make Trinidad a better place."
       />

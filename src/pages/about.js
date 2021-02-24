@@ -12,7 +12,7 @@ const About = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Eckstein Modern Tech Ltd - About"
+        title="Modern Tech Ltd - About"
         keywords="Trinidad, Eckstein Modern Tech Ltd, Mission Statement, About Us, Vision, Who We Are"
         description="Eckstein Modern Tech Ltd mission is to improve Trinidad's technology and provide innovation solutions"
       />
