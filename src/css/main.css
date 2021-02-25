@@ -70,12 +70,3 @@ Banner Style
 .slick-track .slick-slide {
   min-height: 100%;
 }
-.bannerBG {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: url("../../static/bannerBG.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
