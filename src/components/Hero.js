@@ -58,44 +58,50 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
         </Slider>
       </div>
       <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-10 text-center lg:gap-8 ">
-        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
-          <div className="flex-shrink-0">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
-              <GiGearHammer />
+        <div className="z-10 flex items-center justify-center w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
+          <div>
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
+                <GiGearHammer />
+              </div>
             </div>
+            <h1 className="pt-4 text-xl font-semibold text-gray-700 md:text-2xl">
+              {management[0].title}
+            </h1>
+            <p className="py-4 text-sm text-gray-500 md:text-base">
+              {management[0].subTitle}
+            </p>
           </div>
-          <h1 className="pt-4 text-xl font-semibold text-gray-700 md:text-2xl">
-            {management[0].title}
-          </h1>
-          <p className="py-4 text-sm text-gray-500 md:text-base">
-            {management[0].subTitle}
-          </p>
         </div>
-        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
-          <div className="flex-shrink-0">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto text-2xl text-white rounded-md bg-primary">
-              <BsBuilding />
+        <div className="z-10 flex items-center justify-center w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
+          <div>
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center w-12 h-12 mx-auto text-2xl text-white rounded-md bg-primary">
+                <BsBuilding />
+              </div>
             </div>
+            <h1 className="pt-4 text-xl font-semibold text-gray-700 md:text-2xl">
+              {infrastructure[0].title}
+            </h1>
+            <p className="py-4 text-sm text-gray-500 md:text-base">
+              {infrastructure[0].subTitle}
+            </p>
           </div>
-          <h1 className="pt-4 text-xl font-semibold text-gray-700 md:text-2xl">
-            {infrastructure[0].title}
-          </h1>
-          <p className="py-4 text-sm text-gray-500 md:text-base">
-            {infrastructure[0].subTitle}
-          </p>
         </div>
-        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
-          <div className="flex-shrink-0">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
-              <GiComputing />
+        <div className="z-10 flex items-center justify-center w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
+          <div>
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
+                <GiComputing />
+              </div>
             </div>
+            <h1 className="pt-4 text-xl font-semibold text-gray-700 md:text-2xl">
+              {digital[0].title}
+            </h1>
+            <p className="py-4 text-sm text-gray-500 md:text-base">
+              {digital[0].subTitle}
+            </p>
           </div>
-          <h1 className="pt-4 text-xl font-semibold text-gray-700 md:text-2xl">
-            {digital[0].title}
-          </h1>
-          <p className="py-4 text-sm text-gray-500 md:text-base">
-            {digital[0].subTitle}
-          </p>
         </div>
       </section>
     </article>
