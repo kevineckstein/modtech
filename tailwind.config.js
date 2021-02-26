@@ -11,6 +11,7 @@ module.exports = {
       },
       height: {
         banner: "680px",
+        service: "21rem",
       },
       maxHeight: {
         banner: "680px",

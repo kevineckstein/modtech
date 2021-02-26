@@ -11,6 +11,8 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
     infinite: true,
     arrows: false,
     autoplay: true,
+    pauseOnHover: false,
+    adaptiveHeight: true,
     lazyLoad: false,
     autoplaySpeed: 3000,
     className: "banner",
@@ -56,7 +58,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
         </Slider>
       </div>
       <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-10 text-center lg:gap-8 ">
-        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:mx-0 lg:w-1/4 hover:shadow-xl">
+        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
           <div className="flex-shrink-0">
             <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
               <GiGearHammer />
@@ -69,7 +71,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
             {management[0].subTitle}
           </p>
         </div>
-        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:mx-0 lg:w-1/4 hover:shadow-xl">
+        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
           <div className="flex-shrink-0">
             <div className="flex items-center justify-center w-12 h-12 mx-auto text-2xl text-white rounded-md bg-primary">
               <BsBuilding />
@@ -82,7 +84,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
             {infrastructure[0].subTitle}
           </p>
         </div>
-        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:mx-0 lg:w-1/4 hover:shadow-xl">
+        <div className="z-10 w-4/5 px-4 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg h-service lg:mx-0 lg:w-1/4 hover:shadow-xl">
           <div className="flex-shrink-0">
             <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
               <GiComputing />
