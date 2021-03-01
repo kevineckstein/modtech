@@ -13,6 +13,7 @@ export default class Contact extends React.Component {
       <Layout>
         <SEO
           title="Modern Tech Ltd - Contact"
+          name="Modern Tech Ltd - Contact"
           keywords="Trinidad, Eckstein Modern Tech Ltd, Contact, Information, Email, Address, Phone Number"
           description="Eckstein Modern Tech Ltd contact inforamtion and ways in reaching us to create modern solutions"
         />

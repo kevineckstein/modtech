@@ -8,6 +8,7 @@ const Error = () => {
     <Layout>
       <SEO
         title="Modern Tech Ltd - 404"
+        name="Modern Tech Ltd - 404"
         keywords="Trinidad, Eckstein Modern Tech Ltd, Error, Not Found, 404"
         description="Eckstein Modern Tech Ltd 404, page not found."
       />

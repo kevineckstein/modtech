@@ -12,6 +12,8 @@ const ComponentName = ({ data }) => {
     imagesTitle,
     serviceType,
     images,
+    price,
+    pricingDesc,
     banner,
     metaTagTitle,
     metaTagKeywords,
@@ -70,17 +72,17 @@ const ComponentName = ({ data }) => {
           <div className="hidden w-full -mt-16 bannerBG lg:block"></div>
         </section>
         <section className="bg-gradient-to-t from-gray-100 via-blue-100 to-gray-100">
-          <div className="container px-6 pt-4 pb-24 mx-auto" id="temp-service">
+          <div className="container px-6 pt-32 pb-24 mx-auto" id="temp-service">
             <section>
               <div className="mb-20 text-center">
-                <h1 className="mb-4 text-2xl font-medium text-center text-gray-900 sm:text-3xl title-font">
+                <h1 className="mb-4 text-2xl font-medium text-center text-gray-900 sm:text-3xl">
                   {serviceTitle}
                 </h1>
                 <p className="mx-auto text-base leading-relaxed xl:w-2/4 lg:w-3/4">
                   {serviceParagraph}
                 </p>
               </div>
-              <div className="flex flex-wrap -mx-2 lg:w-11/12 sm:mx-auto sm:mb-2">
+              <div className="flex flex-wrap -mx-2 lg:w-2/3 sm:mx-auto sm:mb-2">
                 {serviceType.map(service => {
                   return (
                     <div
@@ -103,19 +105,67 @@ const ComponentName = ({ data }) => {
                           <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                           <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
-                        <span className="font-medium title-font">
-                          {service.service}
-                        </span>
+                        <span className="font-medium">{service.service}</span>
                       </div>
                     </div>
                   )
                 })}
               </div>
             </section>
+            {pricingDesc ? (
+              <section>
+                <div className="py-24 mx-auto">
+                  <div className="flex flex-col w-full mb-20 text-center">
+                    <h1 className="mb-2 text-3xl font-medium text-gray-900 sm:text-4xl">
+                      Pricing
+                    </h1>
+                    <p className="mx-auto text-base leading-relaxed lg:w-2/3">
+                      {pricingDesc}
+                    </p>
+                  </div>
+                  <div className="w-full mx-auto overflow-auto lg:w-2/3">
+                    <table className="w-full text-left whitespace-no-wrap table-auto">
+                      <thead>
+                        <tr>
+                          <th className="px-4 py-3 text-sm text-center text-gray-900 bg-green-100 rounded-tl rounded-bl sm:text-base">
+                            Plan
+                          </th>
+                          <th className="px-4 py-3 text-sm text-center text-gray-900 bg-green-100 sm:text-base">
+                            Package
+                          </th>
 
+                          <th className="px-4 py-3 text-sm text-center text-gray-900 bg-green-100 sm:text-base">
+                            Price
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {price.map(price => {
+                          return (
+                            <tr key={price.id}>
+                              <td className="px-4 py-3 text-sm text-center border-b-2 border-gray-200 sm:text-xl">
+                                {price.plan}
+                              </td>
+                              <td className="px-4 py-3 text-sm text-center border-b-2 border-gray-200 sm:text-xl ">
+                                {price.package}
+                              </td>
+                              <td className="px-4 py-3 text-sm text-center text-gray-900 border-b-2 border-gray-200 sm:text-xl">
+                                {price.price}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+            ) : (
+              ""
+            )}
             <section className="text-gray-600">
               <div className="my-20 text-center">
-                <h1 className="mb-4 text-2xl font-medium text-center text-gray-900 sm:text-3xl title-font">
+                <h1 className="mb-4 text-2xl font-medium text-center text-gray-900 sm:text-3xl">
                   {imagesTitle}
                 </h1>
                 <p className="mx-auto text-base leading-relaxed xl:w-2/4 lg:w-3/4">
@@ -160,6 +210,13 @@ export const query = graphql`
       metaTagTitle
       metaTagKeywords
       metaTagDescription
+      pricingDesc
+      price {
+        package
+        plan
+        price
+        id
+      }
       serviceType {
         service
         id

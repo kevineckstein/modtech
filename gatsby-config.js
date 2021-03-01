@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: "Modern Tech Ltd",
+    name: "Modern Tech Ltd",
     description:
       "Trinidad's modern solutions to technical problems. Providing innovative solutions nationwide for Information Technology and many other areas of expertise in both commercial and enterprise",
     author: "Kevin Eckstein",
+    background_color: "#fff",
     siteUrl: "https://modtech.co.tt",
     keywords:
       "Trinidad, Modern, Tech, Technology, Solutions, Kevin, Eckstein, Information, I.T, Management, Services",
