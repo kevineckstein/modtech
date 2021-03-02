@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Slider from "react-slick"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import { Link } from "gatsby"
 
 const ComponentName = ({ data }) => {
   const {
@@ -15,6 +16,8 @@ const ComponentName = ({ data }) => {
     price,
     pricingDesc,
     banner,
+    contactTitle,
+    contactDesc,
     metaTagTitle,
     metaTagKeywords,
     metaTagDescription,
@@ -163,6 +166,33 @@ const ComponentName = ({ data }) => {
             ) : (
               ""
             )}
+            <section class="text-gray-600 body-font relative">
+              <div class="container py-12 mx-auto">
+                <div class="flex flex-col text-center w-full mb-12">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+                    {contactTitle}
+                  </h1>
+                  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    {contactDesc}
+                  </p>
+                  <p class=" mx-auto leading-relaxed text-base">
+                    For more Info Click Below!
+                  </p>
+                </div>
+                <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                  <div class="flex flex-wrap -m-2">
+                    <div class="flex p-2 w-full">
+                      <Link
+                        to="/contact"
+                        className="flex px-6 py-2 mx-auto text-lg text-white border-0 rounded bg-primary focus:outline-none hover:bg-secondary"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
             <section className="text-gray-600">
               <div className="my-20 text-center">
                 <h1 className="mb-4 text-2xl font-medium text-center text-gray-900 sm:text-3xl">
@@ -202,7 +232,6 @@ const ComponentName = ({ data }) => {
 export const query = graphql`
   query GetSingleService($url: String) {
     service: strapiServices(url: { eq: $url }) {
-      mainTitle
       serviceParagraph
       serviceTitle
       imagesParagraph
@@ -210,6 +239,8 @@ export const query = graphql`
       metaTagTitle
       metaTagKeywords
       metaTagDescription
+      contactTitle
+      contactDesc
       pricingDesc
       price {
         package

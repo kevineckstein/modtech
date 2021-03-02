@@ -56,6 +56,12 @@ export default ({ styleClass }) => {
             Services
           </button>
           <div className="absolute right-0 w-56 mr-4 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 services">
+            <Link
+              to="/"
+              className="block px-4 py-2 text-xs font-medium text-black rounded-md font-heading md:text-base hover:bg-gray-100 hover:text-secondary"
+            >
+              I.T Services
+            </Link>
             {tempServices}
           </div>
         </div>
