@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Slider from "react-slick"
+import Image from "gatsby-image"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { Link } from "gatsby"
@@ -49,10 +50,14 @@ const ComponentName = ({ data }) => {
                     className="inline-block w-full h-full"
                   >
                     <div className="relative text-left">
-                      <img
-                        src={banners.url}
-                        className="object-cover object-center w-full h-auto max-h-banner"
-                        alt={banners.alternativeText || banners.name}
+                      <Image
+                        fluid={banners.formats.large.childImageSharp.fluid}
+                        style={{ maxHeight: `680px` }}
+                        alt={
+                          banners.altText ||
+                          banners.formats.large.childImageSharp.fluid
+                            .originalName
+                        }
                       />
                       <div className="absolute bottom-0 left-0 w-full bg-textBG lg:h-1/3 h-2/5 ">
                         <div className="container w-full px-6 py-2 mx-auto lg:py-3">
@@ -166,22 +171,22 @@ const ComponentName = ({ data }) => {
             ) : (
               ""
             )}
-            <section class="text-gray-600 body-font relative">
-              <div class="container py-12 mx-auto">
-                <div class="flex flex-col text-center w-full mb-12">
-                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+            <section className="relative text-gray-600 body-font">
+              <div className="container py-12 mx-auto">
+                <div className="flex flex-col w-full mb-12 text-center">
+                  <h1 className="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
                     {contactTitle}
                   </h1>
-                  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  <p className="mx-auto text-base leading-relaxed lg:w-2/3">
                     {contactDesc}
                   </p>
-                  <p class=" mx-auto leading-relaxed text-base">
+                  <p className="mx-auto text-base leading-relaxed ">
                     For more Info Click Below!
                   </p>
                 </div>
-                <div class="lg:w-1/2 md:w-2/3 mx-auto">
-                  <div class="flex flex-wrap -m-2">
-                    <div class="flex p-2 w-full">
+                <div className="mx-auto lg:w-1/2 md:w-2/3">
+                  <div className="flex flex-wrap -m-2">
+                    <div className="flex w-full p-2">
                       <Link
                         to="/contact"
                         className="flex px-6 py-2 mx-auto text-lg text-white border-0 rounded bg-primary focus:outline-none hover:bg-secondary"
@@ -253,7 +258,22 @@ export const query = graphql`
         id
       }
       banner {
-        url
+        formats {
+          large {
+            id
+            childImageSharp {
+              fluid(
+                quality: 100
+                maxWidth: 1520
+                maxHeight: 538
+                webpQuality: 100
+              ) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+                originalName
+              }
+            }
+          }
+        }
         id
         name
         alternativeText

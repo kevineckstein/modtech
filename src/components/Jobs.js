@@ -25,11 +25,11 @@ const Jobs = ({ testimonials }) => {
                     data-sal-easing="ease"
                   >
                     <div className="flex items-center justify-center">
-                      <div className="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                      <div className="h-16 mr-4 overflow-hidden bg-gray-200 rounded-full w-28">
                         {testimonial.image && (
                           <Image
                             fluid={testimonial.image.childImageSharp.fluid}
-                            style={{ height: `65px` }}
+                            style={{ height: `64px` }}
                             alt={
                               testimonial.altText ||
                               testimonial.image.childImageSharp.fluid
