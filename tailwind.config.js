@@ -11,6 +11,7 @@ module.exports = {
       height: {
         banner: "680px",
         service: "22rem",
+        servicelg: "19rem",
       },
       width: {
         card: "30%",

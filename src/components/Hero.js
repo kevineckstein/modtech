@@ -57,7 +57,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
         </Slider>
       </div>
       <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-10 text-center lg:gap-6">
-        <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-card hover:shadow-xl">
+        <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service xl:h-servicelg lg:mx-0 lg:w-card hover:shadow-xl">
           <div>
             <div className="flex-shrink-0">
               <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
@@ -72,7 +72,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
             </p>
           </div>
         </div>
-        <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-card hover:shadow-xl">
+        <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service xl:h-servicelg lg:mx-0 lg:w-card hover:shadow-xl">
           <div>
             <div className="flex-shrink-0">
               <div className="flex items-center justify-center w-12 h-12 mx-auto text-2xl text-white rounded-md bg-primary">
@@ -87,7 +87,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
             </p>
           </div>
         </div>
-        <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-card hover:shadow-xl">
+        <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service xl:h-servicelg lg:mx-0 lg:w-card hover:shadow-xl">
           <div>
             <div className="flex-shrink-0">
               <div className="flex items-center justify-center w-12 h-12 mx-auto text-3xl text-white rounded-md bg-primary">
