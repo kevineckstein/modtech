@@ -10,7 +10,10 @@ module.exports = {
       },
       height: {
         banner: "680px",
-        service: "20rem",
+        service: "22rem",
+      },
+      width: {
+        card: "30%",
       },
       maxHeight: {
         banner: "680px",
