@@ -33,22 +33,3 @@ Navbar
 .service:hover .services {
   display: block;
 }
-/*
-Banner Style
-*/
-@media (max-width: 1390px) {
-  .banner {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    height: auto;
-  }
-}
-@media (min-width: 1390px) {
-  .banner {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    height: 680px;
-  }
-}

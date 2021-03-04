@@ -15,7 +15,6 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
     adaptiveHeight: true,
     lazyLoad: false,
     autoplaySpeed: 3000,
-    className: "banner",
   }
 
   return (
@@ -57,7 +56,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
           })}
         </Slider>
       </div>
-      <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-10 text-center lg:gap-6 ">
+      <section className="container flex flex-wrap items-center justify-center gap-1 mx-auto -mt-10 text-center lg:gap-6">
         <div className="z-10 flex items-center justify-center w-4/5 px-6 py-4 mx-auto mt-6 bg-white rounded-lg shadow-lg lg:h-service lg:mx-0 lg:w-card hover:shadow-xl">
           <div>
             <div className="flex-shrink-0">

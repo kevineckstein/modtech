@@ -168,21 +168,13 @@ module.exports = {
         develop: false, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
         whitelist: [
-          "NoScroll",
-          "header",
           "font-sub",
           "font-heading",
-          "clear",
           "text",
           "services",
-          "banner",
           "slick-slide",
           "slick-track",
-          "servicesBG",
-          "bannerBG",
           "wid",
-          "service-template",
-          "hide",
           "[data-sal|='slide'].sal-animate",
           "[data-sal='slide-right']",
           "[data-sal='slide-down']",
