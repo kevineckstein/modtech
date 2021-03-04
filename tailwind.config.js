@@ -7,7 +7,6 @@ module.exports = {
         secondary: "#0B90C2",
         textBG: "rgba(0, 0, 0, 0.8)",
         serviceBG: "rgba(0, 0, 0, 0.25)",
-        navBG: "rgba(255, 255, 255, 0.98)",
       },
       height: {
         banner: "680px",

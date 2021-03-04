@@ -18,7 +18,7 @@ const Jobs = ({ testimonials }) => {
               {testimonials.map(testimonial => {
                 return (
                   <section
-                    className="flex flex-col items-start justify-start w-full h-auto p-6 mb-6 lg:w-1/3 lg:mb-0"
+                    className="flex flex-col items-start justify-start w-full p-6 mb-6 lg:w-1/3 lg:mb-0 h-80"
                     key={testimonial.strapiId}
                     data-sal="slide-down"
                     data-sal-duration="800"

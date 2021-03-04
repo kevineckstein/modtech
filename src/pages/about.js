@@ -17,7 +17,7 @@ const About = ({ data }) => {
         keywords="Trinidad, Eckstein Modern Tech Ltd, Mission Statement, About Us, Vision, Who We Are"
         description="Eckstein Modern Tech Ltd mission is to improve Trinidad's technology and provide innovation solutions"
       />
-      <article className="flex flex-col items-center content-center justify-center py-24 lg:-mt-20 bg-gradient-to-t from-gray-100 to-blue-100">
+      <article className="flex flex-col items-center content-center justify-center py-24 bg-gradient-to-t from-gray-100 to-blue-100">
         <div className="container mx-6">
           <Image
             fluid={about[0].image.childImageSharp.fluid}

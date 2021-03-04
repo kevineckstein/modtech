@@ -51,7 +51,7 @@ export const query = graphql`
             fluid(
               quality: 100
               maxWidth: 1520
-              maxHeight: 680
+              maxHeight: 538
               webpQuality: 100
             ) {
               ...GatsbyImageSharpFluid_withWebp_noBase64

@@ -19,7 +19,7 @@ const Hero = ({ banners, digital, infrastructure, management }) => {
   }
 
   return (
-    <article className="min-h-full bg-gray-100 lg:-mt-20">
+    <article className="min-h-full bg-gray-100">
       <div className="w-full min-h-full mx-auto">
         <Slider {...settings}>
           {banners.map(banner => {

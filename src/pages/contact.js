@@ -17,7 +17,7 @@ export default class Contact extends React.Component {
           keywords="Trinidad, Eckstein Modern Tech Ltd, Contact, Information, Email, Address, Phone Number"
           description="Eckstein Modern Tech Ltd contact inforamtion and ways in reaching us to create modern solutions"
         />
-        <article className="relative min-h-screen lg:-mt-20 lg:pt-20 bg-gradient-to-t from-gray-100 to-blue-100">
+        <article className="relative min-h-screen bg-gradient-to-t from-gray-100 to-blue-100">
           <section className="container px-5 py-24 mx-auto">
             <div className="flex flex-col w-full mb-12 text-center">
               <Title title="Contact Us" />

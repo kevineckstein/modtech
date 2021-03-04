@@ -12,7 +12,7 @@ const Error = () => {
         keywords="Trinidad, Eckstein Modern Tech Ltd, Error, Not Found, 404"
         description="Eckstein Modern Tech Ltd 404, page not found."
       />
-      <article className="flex items-center justify-center w-full min-h-screen py-24 lg:-mt-20 bg-gradient-to-t from-gray-100 to-blue-100">
+      <article className="flex items-center justify-center w-full min-h-screen py-24 bg-gradient-to-t from-gray-100 to-blue-100">
         <div className="flex flex-col text-gray-700 lg:flex-row lg:space-x-16 lg:space-x-reverse">
           <section className="order-1 max-w-md px-2 text-sm md:text-base lg:px-0">
             <header className="mb-6">

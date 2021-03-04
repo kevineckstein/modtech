@@ -20,7 +20,7 @@ const Partners = ({ partners }) => {
           {partners.map(logo => {
             return (
               <section
-                className="inline-block p-4 mx-auto"
+                className="inline-block p-4 mx-auto h-28"
                 key={logo.strapiId}
                 data-sal="fade-in"
                 data-sal-duration="800"

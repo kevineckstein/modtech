@@ -39,7 +39,7 @@ const ComponentName = ({ data }) => {
         description={metaTagDescription}
       />
       <Layout>
-        <section className="h-full bg-gray-100 lg:-mt-20">
+        <section className="h-full bg-gray-100">
           <div className="w-full h-full mx-auto">
             <Slider {...settings}>
               {banner.map(banners => {
