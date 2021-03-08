@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    flags: { PRESERVE_WEBPACK_CACHE: true },
     title: "Modern Tech Ltd",
     name: "Modern Tech Ltd",
     description:
