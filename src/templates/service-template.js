@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Slider from "react-slick"
+import Image from "gatsby-image"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { Link } from "gatsby"
@@ -43,17 +44,20 @@ const ComponentName = ({ data }) => {
           <div className="w-full h-full mx-auto">
             <Slider {...settings}>
               {banner.map(banners => {
+                console.log(banners)
                 return (
                   <section
                     key={banners.id}
                     className="inline-block w-full h-full"
                   >
                     <div className="relative text-left">
-                      <img
-                        src={banners.url}
+                      <Image
+                        fluid={banners.localFile.childImageSharp.fluid}
                         style={{ maxHeight: `680px` }}
-                        className="w-full"
-                        alt={banners.altText}
+                        alt={
+                          banners.altText ||
+                          banners.localFile.childImageSharp.fluid.originalName
+                        }
                       />
                       <div className="absolute bottom-0 left-0 w-full bg-textBG lg:h-1/3 h-2/5 ">
                         <div className="container w-full px-6 py-2 mx-auto lg:py-3">
@@ -254,7 +258,19 @@ export const query = graphql`
         id
       }
       banner {
-        url
+        localFile {
+          childImageSharp {
+            fluid(
+              quality: 100
+              maxWidth: 1520
+              maxHeight: 538
+              webpQuality: 100
+            ) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+              originalName
+            }
+          }
+        }
         id
         name
         alternativeText
