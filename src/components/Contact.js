@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { AiOutlinePhone } from "@react-icons/all-files/ai/AiOutlinePhone"
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail"
+import { GoLocation } from "@react-icons/all-files/go/GoLocation"
 
 export default () => {
   const {
@@ -23,7 +24,10 @@ export default () => {
         </p>
       </div>
       <div>
-        <p className="leading-normal">{contact[0].address}</p>
+        <p className="inline-flex leading-normal">
+          <GoLocation className="self-center mr-2 text-base text-gray-400 md:text-xl" />
+          {contact[0].address}
+        </p>
       </div>
     </section>
   )

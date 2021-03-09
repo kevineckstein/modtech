@@ -67,6 +67,18 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        allPageHeaders: [
+          "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+        ], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -74,26 +86,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/*": ["cache-control: public, max-age=0, must-revalidate"],
-        }, // option to add more headers. `Link` headers are transformed by the below criteria
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-      },
-    },
+
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
@@ -138,8 +131,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        showSpinner: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
+        formats: ["woff2", "woff"],
         useMinify: true,
         fonts: {
           google: [
@@ -147,60 +147,14 @@ module.exports = {
               family: "Libre Baskerville",
               variants: ["400", "700"],
               fontDisplay: "swap",
-              strategy: "selfHosted",
             },
             {
               family: "Lato",
               variants: ["400", "700"],
               fontDisplay: "swap",
-              strategy: "selfHosted",
             },
           ],
         },
-        formatAgents: {
-          woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: false, // Print removed selectors and processed file names
-        develop: false, // Enable while using `gatsby develop`
-        tailwind: true, // Enable tailwindcss support
-        whitelist: [
-          "font-sub",
-          "font-heading",
-          "text",
-          "services",
-          "slick-slide",
-          "slick-track",
-          "wid",
-          "[data-sal|='slide'].sal-animate",
-          "[data-sal='slide-right']",
-          "[data-sal='slide-down']",
-          "[data-sal='slide-up']",
-          "[data-sal|='slide']",
-          "[data-sal|='fade'].sal-animate",
-          "[data-sal|='fade']",
-          "[data-sal]",
-          "[data-sal][data-sal-easing='ease']",
-          "[data-sal][data-sal-duration='600']",
-          "[data-sal][data-sal-duration='300']",
-          "[data-sal][data-sal-delay='300']",
-          "[data-sal][data-sal-delay='600']",
-          "sal-animate",
-          "sal-disable",
-          "body.sal-disabled [data-sal|=fade]",
-          "[data-sal|=fade].sal-animate",
-          "[data-sal|=slide].sal-animate",
-          "body.sal-disabled [data-sal|=slide]",
-        ], // Don't remove this selector
-        ignore: [
-          "slick-carousel/slick/slick-theme.css",
-          "slick-carousel/slick/slick.css",
-        ], // Ignore files/folders
-        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
   ],

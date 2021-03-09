@@ -1,23 +1,23 @@
 import React from "react"
-import { AiFillInstagram } from "@react-icons/all-files/ai/AiFillInstagram"
-import { AiFillFacebook } from "@react-icons/all-files/ai/AiFillFacebook"
-import { AiFillYoutube } from "@react-icons/all-files/ai/AiFillYoutube"
+import { FaInstagramSquare } from "@react-icons/all-files/fa/FaInstagramSquare"
+import { FaFacebookSquare } from "@react-icons/all-files/fa/FaFacebookSquare"
+import { FaYoutubeSquare } from "@react-icons/all-files/fa/FaYoutubeSquare"
 
 const data = [
   {
     id: 1,
-    icon: <AiFillFacebook className="social-icon"></AiFillFacebook>,
-    url: "https://www.facebook.com",
+    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    url: "https://www.facebook.com/ecksteinmodtech/",
   },
   {
     id: 2,
-    icon: <AiFillInstagram className="social-icon"></AiFillInstagram>,
-    url: "https://www.instagram.com",
+    icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
+    url: "https://www.instagram.com/modtech.co.tt/",
   },
   {
     id: 3,
-    icon: <AiFillYoutube className="social-icon"></AiFillYoutube>,
-    url: "https://www.youtube.com",
+    icon: <FaYoutubeSquare className="social-icon"></FaYoutubeSquare>,
+    url: "https://www.youtube.com/channel/UCoHWn0KFqiLR23PlyiT_BGw",
   },
 ]
 const links = data.map(link => {

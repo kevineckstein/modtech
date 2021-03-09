@@ -211,7 +211,7 @@ const ComponentName = ({ data }) => {
                 {images.map(image => {
                   return (
                     <div
-                      className="w-full p-4 rounded lg:w-1/4 md:w-1/2"
+                      className="w-full p-4 rounded lg:w-1/3 md:w-1/2"
                       key={image.id}
                       data-sal="fade-in"
                       data-sal-duration="600"
