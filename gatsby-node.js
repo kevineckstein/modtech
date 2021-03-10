@@ -59,6 +59,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-export const onServiceWorkerUpdateReady = () => {
-  window.location.reload()
-}
