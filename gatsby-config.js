@@ -67,9 +67,44 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-smoothscroll`,
     {
-      resolve: `gatsby-plugin-gatsby-cloud`,
+      resolve: `gatsby-plugin-offline`,
       options: {
+        precachePages: [`/service/`, `/`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss")],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/public/**/*.html": [
+            "cache-control: public",
+            "cache-control:  max-age=0",
+            "cache-control: must-revalidate",
+          ],
+          "/public/page-data/*": [
+            "cache-control: public",
+            "cache-control:  max-age=0",
+            "cache-control: must-revalidate",
+          ],
+          "/static/*": [
+            "cache-control: public",
+            "cache-control: max-age=31536000",
+            "cache-control: immutable",
+          ],
+        }, // option to add more headers. `Link` headers are transformed by the below criteria
         allPageHeaders: [
           "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
         ], // option to add headers for all pages. `Link` headers are transformed by the below criteria
@@ -77,20 +112,6 @@ module.exports = {
         mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
         mergeCachingHeaders: true, // boolean to turn off the default caching headers
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-scroll-reveal`,
-    `gatsby-plugin-smoothscroll`,
-
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require("tailwindcss")],
       },
     },
     {
