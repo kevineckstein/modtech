@@ -24,6 +24,7 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
         icon: `src/images/modern-tech-512.png`,
+        cache_busting_mode: "none",
         icons: [
           {
             src: `static/icons/modern-tech-72.png`,
@@ -77,6 +78,9 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/service/`, `/`],
+        workboxConfig: {
+          globPatterns: ["**/icons*"],
+        },
       },
     },
     {
