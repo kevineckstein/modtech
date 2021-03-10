@@ -74,15 +74,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/service/*`, `/`],
-        workboxConfig: {
-          globPatterns: ["**/icons*"],
-        },
-      },
-    },
+    "gatsby-plugin-remove-serviceworker",
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
